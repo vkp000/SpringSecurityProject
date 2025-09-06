@@ -1,38 +1,31 @@
 # 🚀 SpringSecurityProject
 
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge\&logo=java\&logoColor=white)](https://www.java.com/)
-[![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge\&logo=spring-boot\&logoColor=white)](https://spring.io/projects/spring-boot)
-[![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge\&logo=apache-maven\&logoColor=white)](https://maven.apache.org/)
-[![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge\&logo=json-web-tokens\&logoColor=white)](https://jwt.io/)
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org/)
+[![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)](https://jwt.io/)
 
-A **Spring Boot project** demonstrating secure REST APIs with **Spring Security** and **JWT-based authentication**. This project implements **role-based access control** to protect sensitive endpoints, making it ideal for learning and production-ready security setups.
+A **Spring Boot project** demonstrating secure REST APIs with **Spring Security** and **JWT-based authentication**. Implements **role-based access control** to protect sensitive endpoints — ideal for learning and production-ready security setups.
 
 ---
 
 ## 🔑 Features
 
-* **JWT Authentication & Authorization**
-  Secure your REST APIs using JSON Web Tokens.
-
-* **Role-based Access Control**
-  Different access levels for `USER` and `ADMIN`.
-
-* **Spring Security Integration**
-  Leverage Spring Security filters and configurations for robust security.
-
-* **Secure Endpoints**
-  Protect sensitive API endpoints with roles and JWT verification.
+* **JWT Authentication & Authorization** – Secure your REST APIs using JSON Web Tokens.
+* **Role-based Access Control** – Different access levels for `USER` and `ADMIN`.
+* **Spring Security Integration** – Leverage Spring Security filters and configurations.
+* **Secure Endpoints** – Protect sensitive API endpoints with roles and JWT verification.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology                                                                                                          | Usage                      |
-| ------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square\&logo=java\&logoColor=white)                     | Backend Development        |
-| ![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square\&logo=spring-boot\&logoColor=white) | REST APIs & Security       |
-| ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square\&logo=apache-maven\&logoColor=white)           | Dependency Management      |
-| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square\&logo=json-web-tokens\&logoColor=white)            | Token-based Authentication |
+| Technology | Usage |
+|------------|-------|
+| ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white) | Backend Development |
+| ![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white) | REST APIs & Security |
+| ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apache-maven&logoColor=white) | Dependency Management |
+| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white) | Token-based Authentication |
 
 ---
 
@@ -41,11 +34,11 @@ A **Spring Boot project** demonstrating secure REST APIs with **Spring Security*
 ```
 SpringSecurityProject/
 │
-├─ src/main/java/com/example/securityproject/
+├─ src/main/java/com/vivek/securityproject/
 │   ├─ controller/        # REST controllers
 │   ├─ model/             # Entity classes
-│   ├─ repository/        # JPA repositories
-│   ├─ security/          # Security configurations & JWT utilities
+│   ├─ repo/              # JPA repositories
+│   ├─ config/            # Security configurations & JWT utilities
 │   └─ service/           # Service layer classes
 │
 ├─ src/main/resources/
@@ -66,7 +59,7 @@ git clone https://github.com/vkp000/SpringSecurityProject.git
 cd SpringSecurityProject
 ```
 
-2. **Build the project using Maven**
+2. **Build the project**
 
 ```bash
 mvn clean install
@@ -82,13 +75,11 @@ mvn spring-boot:run
 
 ## 📖 Usage
 
-* **Authenticate**:
-  Send a `POST` request to `/authenticate` with your username & password to get a JWT token.
+* **Authenticate**  
+Send a `POST` request to `/authenticate` with your username & password to get a JWT token.
 
-* **Access Protected Endpoints**:
-  Include the JWT token in the `Authorization` header as a Bearer token to access secured routes.
-
-Example:
+* **Access Protected Endpoints**  
+Include the JWT token in the `Authorization` header as a Bearer token.
 
 ```http
 Authorization: Bearer <your-jwt-token>
